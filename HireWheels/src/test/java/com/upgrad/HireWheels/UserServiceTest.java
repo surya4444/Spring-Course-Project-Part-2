@@ -1,16 +1,19 @@
+package com.upgrad.HireWheels;
+
 import com.upgrad.HireWheels.dao.UsersDAO;
 import com.upgrad.HireWheels.entities.Users;
 import com.upgrad.HireWheels.exception.UserAlreadyExistsException;
 import com.upgrad.HireWheels.exception.UserNotFoundException;
 import com.upgrad.HireWheels.services.UserService;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import java.util.function.BooleanSupplier;
 
 
 @ExtendWith(SpringExtension.class)

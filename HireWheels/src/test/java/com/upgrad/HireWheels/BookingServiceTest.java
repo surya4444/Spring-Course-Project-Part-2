@@ -1,5 +1,13 @@
-import com.upgrad.HireWheels.dao.*;
-import com.upgrad.HireWheels.entities.*;
+package com.upgrad.HireWheels;
+
+import com.upgrad.HireWheels.dao.BookingDAO;
+import com.upgrad.HireWheels.dao.LocationDAO;
+import com.upgrad.HireWheels.dao.UsersDAO;
+import com.upgrad.HireWheels.dao.VehicleDAO;
+import com.upgrad.HireWheels.entities.Booking;
+import com.upgrad.HireWheels.entities.Location;
+import com.upgrad.HireWheels.entities.Users;
+import com.upgrad.HireWheels.entities.Vehicle;
 import com.upgrad.HireWheels.exception.InsufficientBalanceException;
 import com.upgrad.HireWheels.services.BookingService;
 import org.junit.jupiter.api.AfterEach;

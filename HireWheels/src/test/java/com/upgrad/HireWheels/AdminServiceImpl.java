@@ -1,9 +1,9 @@
+package com.upgrad.HireWheels;
+
 import com.upgrad.HireWheels.dao.*;
 import com.upgrad.HireWheels.entities.*;
-import com.upgrad.HireWheels.exception.InsufficientBalanceException;
 import com.upgrad.HireWheels.exception.UserNotRegisterVehicleException;
 import com.upgrad.HireWheels.services.AdminService;
-import com.upgrad.HireWheels.services.InitService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,8 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import java.util.Date;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = {"classpath:HireWheels.xml"})
@@ -55,6 +53,7 @@ public class AdminServiceImpl {
 
     @BeforeEach
     public void dataInsert() {
+
         Role userRole = roleDAO.save(new Role("User"));
         Role adminRole = roleDAO.save(new Role("Admin"));
         Admin1 = usersDAO.save(new Users( "Admin" , "Admin" , "admin@123" , "upgrad@gmail.com" , "9999999999" , 10000));
